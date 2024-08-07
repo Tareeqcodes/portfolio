@@ -17,35 +17,31 @@
   <title>dfh technologies</title>
 </head>
 <body>
-  <nav class="navbar navbar-expand-sm fixed-top">
-    <div class="container">
-      <div class="collapse navbar-collapse" id="collapsibleNavbar">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="#info">About Us</a>
+  <nav class="navbar">
+    <input class="menu-btn" type="checkbox" id="menu-btn" />
+    <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+        <ul class="menu">
+          <li>
+            <a href="#info">About Us</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#services">Services</a>
+          <li>
+            <a href="#services">Services</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#portfolio">Portfolio</a>
+          <li>
+            <a  href="#portfolio">Portfolio</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#contact">Contact</a>
+          <li>
+            <a href="#contact">Contact</a>
           </li>
         </ul>
-      </div>
-    </div>
   </nav>
-  <div class="container-alpha">
+  <div class="container-fluid">
     <header class="header">
         <h1>Dial for help technologies</h1>
       <p>
         "Transforming Ideas into Stunning Websites: We're your go-to website design experts, crafting visually captivating and user-friendly websites. Explore our portfolio and start your digital journey today!"
       </p> 
-      <div class="page_2">
         <a href="#portfolio">Explore our portfolio</a>
-      </div>
     </header>
     <section id="info">
       <h2 class="box left">About Us</h2>
@@ -98,7 +94,7 @@
         </div>
       </div>
     </section>
-    <h2>Our Portfolio <i class="fa-solid fa-folder-open"></i></h2>
+     <h2>Our Portfolio <i class="fa-solid fa-folder-open"></i></h2>
     <section id="portfolio">
     <main id="samples">
       <div class="project">
@@ -251,85 +247,63 @@
     </div>
       </div>
     </main>
-    </section>
-   <section class="tesmonials">
-<h2 class="box left">Testimonials</h2>
-     <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
-       <div class="carousel-inner">
-         <div class="cards">
-         <div class="carousel-item active">
-           <div id="card-1">
-             <div class="Colton">
-               <img src="src/assest/images/image-colton.jpg" alt="--" />
-               <div id="Smith">
-                 <h4>Colton Smith</h4>
-                 <h5>CEO at Company</h5>
-               </div>
-             </div>
-             <p>
-               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur sint nisi at exercitationem non voluptatibus deserunt sequi commodi molestias quia.
-             </p>
-           </div>
-         </div>
-         <div class="carousel-item active">
-           <div id="card-1">
-             <div class="Colton">
-               <img src="src/assest/images/image-colton.jpg" alt="--" />
-               <div id="Smith">
-                 <h4>Colton Smith</h4>
-                 <h5>CEO at Company</h5>
-               </div>
-             </div>
-             <p>
-               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur sint nisi at exercitationem non voluptatibus deserunt sequi commodi molestias quia.
-             </p>
-           </div>
-         </div>
-         <div class="carousel-item">
-           <div id="card-3">
-             <div class="Anne">
-               <img src="src/assest/images/image-anne.jpg" alt="--" />
-               <div id="Wallace">
-                 <h4>Anne Wallace</h4>
-                 <h5>CEO at Company</h5>
-               </div>
-             </div>
-             <p>
-               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem, voluptates fuga amet beatae ut dolores molestias nostrum. Beatae, illo inventore!
-             </p>
-           </div>
-         </div>
-         <div class="carousel-item">
-           <div id="card-2">
-             <div class="Irene">
-               <img src="src/assest/images/image-irene.jpg" alt="--" />
-               <div id="Roberts">
-                 <h4>Irene Roberts</h4>
-                 <h5>CEO at Company</h5>
-               </div>
-             </div>
-             <p>
-               Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta quidem corrupti iure. Vel dolorem aliquid quasi quae neque, quam dolore?
-             </p>
-           </div>
-         </div>
-         <div class="carousel-item">
-           <div class="card">
-             <!-- Testimonial content -->
-           </div>
-         </div>
-         <!-- More items -->
-       </div>
-     </div>
-       <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
-         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-         <span class="visually-hidden">Previous</span>
-       </button>
-       <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
-         <span class="carousel-control-next-icon" aria-hidden="true"></span>
-         <span class="visually-hidden">Next</span>
-       </button>
-     </div>
+    </section> 
+    <section class="tesmonials">
+      <h2 class="box left">Testimonials</h2>
+      <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="card">
+              <div class="card-header">
+                <img src="src/assest/images/image-colton.jpg" alt="Colton Smith">
+                <div class="card-title">
+                  <h4>Colton Smith</h4>
+                  <h5>CEO at Company</h5>
+                </div>
+              </div>
+              <div class="card-body">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur sint nisi at exercitationem non voluptatibus deserunt sequi commodi molestias quia.</p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="card">
+              <div class="card-header">
+                <img src="src/assest/images/image-anne.jpg" alt="Anne Wallace">
+                <div class="card-title">
+                  <h4>Anne Wallace</h4>
+                  <h5>CEO at Company</h5>
+                </div>
+              </div>
+              <div class="card-body">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, voluptates fuga amet beatae ut dolores molestias nostrum. Beatae, illo inventore!</p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="card">
+              <div class="card-header">
+                <img src="src/assest/images/image-irene.jpg" alt="Irene Roberts">
+                <div class="card-title">
+                  <h4>Irene Roberts</h4>
+                  <h5>CEO at Company</h5>
+                </div>
+              </div>
+              <div class="card-body">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta quidem corrupti iure. Vel dolorem aliquid quasi quae neque, quam dolore?</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
    </section>
     <section id="faq">
       <h2>
@@ -360,14 +334,16 @@
     <section id="contact">
       <h2 class="box left">Contact Us</h2>
       <p>Send us a message</p>
-      <form action="/" id="form">
-        <label for="fullname">Full Name:</label>
-        <input type="text" id="fullname" name="fullname" required>
-        <textarea name="message" id="message" required></textarea>
+      <form action="submit-form.php" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
         <input type="submit" value="Submit">
       </form>
     </section>
-  </div>
     <footer id="footer">
       <div class="social_link">
         <a href="https://www.instagram.com/tareeqcode/"><i class="fa-brands fa-instagram"></i></a>
@@ -378,6 +354,7 @@
       <p>&copy; dfhtechnologies 2024 | All right reserved.</p>
       <p>Contact us: info@dfhtechnologies.com | +234 912 449 8160.</p>
     </footer>
+  </div>
   <script src="src/js/script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
