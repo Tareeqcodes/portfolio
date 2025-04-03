@@ -1,0 +1,83 @@
+import { motion } from 'framer-motion';
+import { FiGithub, FiLinkedin, FiTwitter, FiMail } from 'react-icons/fi';
+import img1 from '../assets/img1.jpg'; 
+
+const Hero = () => {
+  return (
+    <section className="flex flex-col md:flex-row items-center py-10 px-5 md:px-16 justify-between min-h-[80vh]">
+      <motion.div
+        initial={{ opacity: 0, x: -50 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8 }}
+        className="md:w-1/2 space-y-6"
+      >
+        <h1 className="text-4xl md:text-6xl font-bold leading-tight">
+          Hi, I'm <span className="text-blue-400">Tariq</span>
+        </h1>
+        <h2 className="text-2xl md:text-3xl text-gray-600">
+          Frontend & BaaS Developer
+        </h2>
+        <p className="text-gray-500 max-w-lg">
+          I build beautiful, performant web applications with modern technologies
+          and scalable backend architectures.
+        </p>
+        
+        <div className="flex space-x-4">
+          <motion.a
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            href="#contact"
+            className="px-6 py-3 bg-blue-600 rounded-lg font-medium hover:bg-blue-700 transition-colors"
+          >
+            Contact Me
+          </motion.a>
+          <motion.a
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            href="#projects"
+            className="px-6 py-3 border border-gray-600 rounded-lg font-medium hover:bg-gray-800 transition-colors"
+          >
+            View Work
+          </motion.a>
+        </div>
+        
+        <div className="flex space-x-4 pt-4 pl-1">
+          {[
+            { icon: <FiGithub />, url: '#' },
+            { icon: <FiLinkedin />, url: '#' },
+            { icon: <FiTwitter />, url: '#' },
+            { icon: <FiMail />, url: '#' }
+          ].map((social, index) => (
+            <motion.a
+              key={index}
+              href={social.url}
+              whileHover={{ y: -5, color: '#60a5fa' }}
+              className="text-3xl text-gray-700"
+            >
+              {social.icon}
+            </motion.a>
+          ))}
+        </div>
+      </motion.div>
+      
+      <motion.div
+        initial={{ opacity: 0, x: 50 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+        className="md:w-1/2 flex justify-center mt-10 md:mt-0"
+      >
+        <div className="relative w-64 h-64 md:w-80 md:h-80">
+          <div className="absolute inset-0 border-4 border-blue-400 rounded-full opacity-20 animate-spin-slow"></div>
+          <div className="absolute inset-4 border-4 border-purple-500 rounded-full opacity-20 animate-spin-slow-reverse"></div>
+          <img 
+            src={img1}
+            alt="Tariq"
+            className="relative z-10 w-full h-full object-cover  border-4 border-gray-700"
+          />
+        </div>
+      </motion.div>
+    </section>
+  );
+};
+
+export default Hero;
