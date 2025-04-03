@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FiGithub, FiLinkedin, FiTwitter, FiMail } from 'react-icons/fi';
 import img1 from '../assets/img1.jpg'; 
@@ -23,39 +24,48 @@ const Hero = () => {
         </p>
         
         <div className="flex space-x-4">
-          <motion.a
+          <motion.div
             whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-            href="#contact"
-            className="px-6 py-3 bg-blue-600 rounded-lg font-medium hover:bg-blue-700 transition-colors"
-          >
+            whileTap={{ scale: 0.9 }}>
+            <Link 
+              to="/contact"
+              className="px-6 py-3 bg-blue-600 rounded-lg font-medium hover:bg-blue-700 transition-colors"
+            >
             Contact Me
-          </motion.a>
-          <motion.a
+            </Link>
+          </motion.div>
+          <motion.div
             whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-            href="#projects"
-            className="px-6 py-3 border border-gray-600 rounded-lg font-medium hover:bg-gray-800 transition-colors"
-          >
-            View Work
-          </motion.a>
+            whileTap={{ scale: 0.9 }}>
+             <Link
+              to="/work"
+               className="px-6 py-3 border border-gray-600 rounded-lg font-medium hover:bg-gray-800 transition-colors"
+             >
+               View Work
+             </Link>
+          </motion.div>
         </div>
         
         <div className="flex space-x-4 pt-4 pl-1">
           {[
-            { icon: <FiGithub />, url: '#' },
-            { icon: <FiLinkedin />, url: '#' },
-            { icon: <FiTwitter />, url: '#' },
-            { icon: <FiMail />, url: '#' }
+            { icon: <FiGithub />, url: 'https://github.com/Tareeqcodes' },
+            { icon: <FiLinkedin />, url: 'www.linkedin.com/in/tariqauwal' },
+            { icon: <FiTwitter />, url: 'https://x.com/tariqauwal' }
+
           ].map((social, index) => (
-            <motion.a
+            <motion.div
               key={index}
               href={social.url}
-              whileHover={{ y: -5, color: '#60a5fa' }}
-              className="text-3xl text-gray-700"
+              whileHover={{ y: -5, color: '#60a5fa' }}>
+            <Link 
+              to={social.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-3xl text-gray-700 hover:text-blue-400 transition-colors duration-300"
             >
-              {social.icon}
-            </motion.a>
+            {social.icon}
+            </Link>
+            </motion.div>
           ))}
         </div>
       </motion.div>

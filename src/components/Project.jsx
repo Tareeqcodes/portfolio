@@ -1,34 +1,36 @@
-// ProjectsSection.jsx
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FiGithub, FiExternalLink } from 'react-icons/fi';
+import P1 from '../assets/P1.png';
+import p2 from '../assets/p2.png';
+import p3 from '../assets/p3.png';
 
 const projects = [
   {
-    title: "E-commerce Platform",
-    description: "A full-stack e-commerce solution with React, Node.js, and Firebase",
-    tags: ["React", "Firebase", "Node.js"],
-    github: "#",
-    live: "#",
-    image: "/project1.jpg"
+    title: "BukHive",
+    description: "A full-stack Web3 application that revolutionizes how students interact with their university environment. With Bukhive, students can access departmental PDFs, book hostels seamlessly, and earn tokens that unlock a world of exclusive benefits and purchases.",
+    tags: ["React", "Firebase", "Appwrite", "Node.js"],
+    github: "https://github.com/Tareeqcodes/Edusphere",
+    live: "https://edusphere-git-main-tareeq-s-projects.vercel.app/",
+    image: P1
   },
   {
-    title: "Task Management App",
-    description: "A collaborative task management application with real-time updates",
-    tags: ["React", "GraphQL", "AWS AppSync"],
-    github: "#",
-    live: "#",
-    image: "/project2.jpg"
+    title: "Huddle-landing-page",
+    description: "A well design single page.",
+    tags: ["Html5", "Css", "JavaScript"],
+    github: "https://github.com/Tareeqcodes/huddle-landing-page-with-single-introductory-section-master",
+    live: "https://tareeqcodes.github.io/huddle-landing-page-with-single-introductory-section-master/",
+    image: p2
   },
   {
     title: "Portfolio Template",
-    description: "A customizable portfolio template for developers",
-    tags: ["Next.js", "Tailwind CSS", "Framer Motion"],
-    github: "#",
-    live: "#",
-    image: "/project3.jpg"
+    description: "A intro-component with signup-form which includes trail logic .",
+    tags: ["Html5", "Tailwind CSS", "JavaScript"],
+    github: "https://github.com/Tareeqcodes/intro-component-with-signup-form-master",
+    live: "https://tareeqcodes.github.io/intro-component-with-signup-form-master/",
+    image: p3
   },
 ];
-
 const Project = () => {
   return (
     <motion.section
@@ -80,18 +82,22 @@ const Project = () => {
               </div>
               
               <div className="flex space-x-4">
-                <a 
-                  href={project.github}
-                  className="flex items-center text-sm text-gray-400 hover:text-blue-400"
+                <Link 
+                  to={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center text-sm text-gray-200 hover:text-blue-400"
                 >
                   <FiGithub className="mr-1" /> Code
-                </a>
-                <a 
-                  href={project.live}
-                  className="flex items-center text-sm text-gray-400 hover:text-blue-400"
+                </Link>
+                <Link 
+                  to={project.live}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center text-sm text-gray-200 hover:text-blue-400"
                 >
                   <FiExternalLink className="mr-1" /> Live Demo
-                </a>
+                </Link>
               </div>
             </div>
           </motion.div>

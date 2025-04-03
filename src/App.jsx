@@ -1,25 +1,20 @@
 import React from 'react'
-import About from './components/About';
-import Header from './components/Header';
-import Hero from './components/Hero';
-import Project from './components/Project';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
-import Skills from './components/Skills';
-import Tools from './components/Tools';
-
+import {
+  Route,
+  Routes,
+  BrowserRouter,
+} from 'react-router-dom';
+import Main from '../Layout/Main'
+import Work from '../pages/Work';
 function App() {
   return (
     <>
-    
-          <Hero />
-          <About />
-          <Skills />
-          <Tools />
-          <Project />
-          <Header />
-          <Contact />
-          <Footer />
+          <BrowserRouter>
+            <Routes>
+              <Route path='/' element={<Main />} />
+              <Route path='/work' element={<Work />} />
+            </Routes>
+          </BrowserRouter>
     </>
   )
 }

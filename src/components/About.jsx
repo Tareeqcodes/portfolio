@@ -1,6 +1,7 @@
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import img1 from '../assets/img1.jpg';
-
+import Resume from '../assets/Resume.pdf';
 const About = () => {
   return (
     <motion.section
@@ -73,9 +74,14 @@ const About = () => {
             </div>
           </div>
           
-          <button className="mt-6 px-6 py-3 bg-blue-600 rounded-lg font-medium hover:bg-blue-700 transition-colors">
+          <Link 
+            to={Resume}
+            target="_blank"
+            download="Resume.pdf"
+            className="inline-block mt-2 px-6 py-3 bg-blue-600 rounded-lg font-medium hover:bg-blue-700 transition-colors"
+          >
             Download CV
-          </button>
+          </Link>
         </motion.div>
       </div>
     </motion.section>
