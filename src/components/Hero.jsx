@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+
 import { motion } from 'framer-motion';
 import { FiGithub, FiLinkedin, FiTwitter, FiMail } from 'react-icons/fi';
 import img1 from '../assets/img1.jpg'; 
@@ -19,30 +19,29 @@ const Hero = () => {
           Frontend & BaaS Developer
         </h2>
         <p className="text-gray-500 max-w-lg">
-          I build beautiful, performant web applications with modern technologies
-          and scalable backend architectures.
+        I specialize in building clean, responsive interfaces and scalable backends using React and BaaS tools like Firebase and Appwrite. Let's build something impactful.
         </p>
         
         <div className="flex space-x-4">
           <motion.div
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}>
-            <Link 
-              to="/contact"
+            <a 
+              href="/contact"
               className="px-6 py-3 bg-blue-600 rounded-lg font-medium hover:bg-blue-700 transition-colors"
             >
             Contact Me
-            </Link>
+            </a>
           </motion.div>
           <motion.div
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}>
-             <Link
-              to="/work"
+             <a
+              href="/work"
                className="px-6 py-3 border border-gray-600 rounded-lg font-medium hover:bg-gray-800 transition-colors"
              >
                View Work
-             </Link>
+             </a>
           </motion.div>
         </div>
         
@@ -50,21 +49,21 @@ const Hero = () => {
           {[
             { icon: <FiGithub />, url: 'https://github.com/Tareeqcodes' },
             { icon: <FiLinkedin />, url: 'www.linkedin.com/in/tariqauwal' },
-            { icon: <FiTwitter />, url: 'https://x.com/tariqauwal' }
-
+            { icon: <FiTwitter />, url: 'https://x.com/tariqauwal' },
+            { icon: <FiMail />, url: 'mailto:tariqauwal020@gmail.com' }
           ].map((social, index) => (
             <motion.div
               key={index}
               href={social.url}
               whileHover={{ y: -5, color: '#60a5fa' }}>
-            <Link 
-              to={social.url}
+            <a 
+              href={social.url}
               target="_blank"
               rel="noopener noreferrer"
               className="text-3xl text-gray-700 hover:text-blue-400 transition-colors duration-300"
             >
             {social.icon}
-            </Link>
+            </a>
             </motion.div>
           ))}
         </div>

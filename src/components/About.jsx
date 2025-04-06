@@ -1,6 +1,6 @@
-import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import img1 from '../assets/img1.jpg';
+import img2 from '../assets/img2.jpg';
 import Resume from '../assets/Resume.pdf';
 const About = () => {
   return (
@@ -26,10 +26,10 @@ const About = () => {
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          <div className="relative w-64 h-64 md:w-80 md:h-80 mx-auto">
+          <div className="relative w-64 h-90 md:w-80 md:h-90 mx-auto">
             <div className="absolute inset-0 bg-blue-500 rounded-lg rotate-6"></div>
             <img 
-              src={img1}
+              src={img2}
               alt="Tariq"
               className="relative z-10 w-full h-full object-cover rounded-lg border-4 border-gray-700"
             />
@@ -74,14 +74,14 @@ const About = () => {
             </div>
           </div>
           
-          <Link 
-            to={Resume}
+          <a 
+            href={Resume}
             target="_blank"
             download="Resume.pdf"
             className="inline-block mt-2 px-6 py-3 bg-blue-600 rounded-lg font-medium hover:bg-blue-700 transition-colors"
           >
             Download CV
-          </Link>
+          </a>
         </motion.div>
       </div>
     </motion.section>
