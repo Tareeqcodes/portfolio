@@ -1,7 +1,7 @@
 
 import { motion } from 'framer-motion';
 import { FiGithub, FiLinkedin, FiTwitter, FiMail } from 'react-icons/fi';
-import img1 from '../assets/img1.jpg'; 
+import img3 from '../assets/img3.jpg'; 
 
 const Hero = () => {
   return (
@@ -79,7 +79,7 @@ const Hero = () => {
           <div className="absolute inset-0 border-4 border-blue-400 rounded-full opacity-20 animate-spin-slow"></div>
           <div className="absolute inset-4 border-4 border-purple-500 rounded-full opacity-20 animate-spin-slow-reverse"></div>
           <img 
-            src={img1}
+            src={img3}
             alt="Tariq"
             className="relative z-10 w-full h-full object-cover  border-4 border-gray-700"
           />
