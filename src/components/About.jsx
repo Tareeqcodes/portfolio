@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion';
-import img1 from '../assets/img1.jpg';
 import img2 from '../assets/img2.jpg';
 import Resume from '../assets/Resume.pdf';
 const About = () => {
