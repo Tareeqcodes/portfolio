@@ -75,13 +75,15 @@ const Hero = () => {
         transition={{ duration: 0.8, delay: 0.2 }}
         className="md:w-1/2 flex justify-center mt-10 md:mt-0"
       >
-        <div className="relative w-64 h-64 md:w-80 md:h-80">
+        <div className="relative w-64 h-80 md:w-80 md:h-full">
           <div className="absolute inset-0 border-4 border-blue-400 rounded-full opacity-20 animate-spin-slow"></div>
           <div className="absolute inset-4 border-4 border-purple-500 rounded-full opacity-20 animate-spin-slow-reverse"></div>
           <img 
             src={img3}
             alt="Tariq"
-            className="relative z-10 w-full h-full object-cover  border-4 border-gray-700"
+            fill
+            priority
+            className="relative z-10 w-full h-full rounded-lg object-cover  border-4 border-orange-900"
           />
         </div>
       </motion.div>

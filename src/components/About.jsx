@@ -49,9 +49,13 @@ const About = () => {
           </p>
           
           <p className="text-gray-500 leading-relaxed">
-            My journey in web development started when... [add your personal story here].
-            Since then, I've worked with various startups and companies to build scalable,
-            user-friendly applications that solve real-world problems.
+          My Journey into Code
+
+It all started when I stumbled upon a Bloomberg article about Mark Zuckerberg teaching his kids to code. I remember thinking, "Code? What's that?"😮 That same day, I fired up Chrome and fell down the rabbit hole of programming—and I never looked back.
+
+After finishing secondary school, I became obsessed with how the web connects people. I taught myself to build everything from responsive interfaces to scalable backends, turning that curiosity into a craft.
+
+Now, I channel that same excitement into projects where tech meets real-world impact.
           </p>
           
           <div className="grid grid-cols-2 gap-4 pt-4">
@@ -69,7 +73,7 @@ const About = () => {
             </div>
             <div>
               <h4 className="font-medium text-blue-400">Experience:</h4>
-              <p>3+ Years</p>
+              <p>4+ Years</p>
             </div>
           </div>
           
