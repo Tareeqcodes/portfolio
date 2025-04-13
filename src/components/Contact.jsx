@@ -8,7 +8,7 @@ const Contact = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="py-20 px-5"
+      className="py-20 px-5" id='contact'
     >
       <motion.h2 
         className="text-3xl md:text-4xl text-justify font-bold mb-12 md:text-center"

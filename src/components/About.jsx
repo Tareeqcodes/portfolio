@@ -7,7 +7,7 @@ const About = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="py-16 text-center"
+      className="py-16 text-center " id='about'
     >
       <motion.h2 
         className="text-3xl md:text-4xl font-bold mb-12 text-center"
