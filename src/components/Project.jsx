@@ -110,9 +110,11 @@ const Project = () => {
         transition={{ delay: 0.6 }}
         className="text-center mt-12"
       >
-        <button className="px-6 py-3 bg-blue-600 rounded-lg font-medium hover:bg-blue-700 transition-colors">
+        <Link 
+        to={"/work"}
+        className="px-6 py-3 bg-blue-600 rounded-lg font-medium hover:bg-blue-700 transition-colors">
           View All Projects
-        </button>
+        </Link>
       </motion.div>
     </motion.section>
   );
